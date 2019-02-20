@@ -1,0 +1,15 @@
+#portfolio-horizontal-div {
+  overflow-x: scroll;
+  overflow: auto;
+  flex-wrap: auto;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projectCards {
+  min-height: 300px;
+  min-width: 300px;
+  margin-right: 15px;
+  display: inline;
+}
+
