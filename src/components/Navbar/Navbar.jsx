@@ -30,7 +30,8 @@ class PortfolioNavbar extends Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
+            {/* will un comment once I figure out how to implement smooth scrolling */}
+              {/* <NavItem>
                 <NavLink className="smoothscroll" href="">Home</NavLink>
               </NavItem>
               <NavItem>
@@ -41,7 +42,7 @@ class PortfolioNavbar extends Component {
               </NavItem>
               <NavItem>
                 <NavLink className="smoothscroll" href="">Contact</NavLink>
-              </NavItem>
+              </NavItem> */}
             </Nav>
           </Collapse>
         </Container>

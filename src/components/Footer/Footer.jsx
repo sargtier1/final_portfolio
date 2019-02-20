@@ -21,13 +21,13 @@ class Footer extends Component {
           <NavbarBrand href="/">Salvatore Argentieri © 2019</NavbarBrand>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="https://www.linkedin.com/in/salvatore-argentieri-39a363146/">LinkedIn</NavLink>
+              <NavLink href="https://www.linkedin.com/in/salvatore-argentieri-39a363146/" target="_blank">LinkedIn</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/sargtier1">GitHub</NavLink>
+              <NavLink href="https://github.com/sargtier1" target="_blank">GitHub</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="mailto:salv.m.argent@gmail.com">Email</NavLink>
+              <NavLink href="mailto:salv.m.argent@gmail.com" target="_blank">Email</NavLink>
             </NavItem>
           </Nav>
         </Container>

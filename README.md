@@ -1,3 +1,5 @@
+This is my career portfolio built using react. Still a few things missing but all and all a solid build. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
