@@ -19,6 +19,7 @@ class About extends Component {
         <Row>
           <br />
           <Col md={{ size: 4, offset: 1 }} sm={{ size: 12 }}>
+            <br />
             <Card id="profileCard" body>
               <Image id="headshot" src={data.headshot} />
               <br />
@@ -26,18 +27,18 @@ class About extends Component {
                 <p>{data.role}</p>
               </CardTitle>
               <CardText>
-              <p>
-                <Icon name="map pin" />
-                {data.location}
-              </p>
-              <p id="willMove">
-                <Icon name="map" />
-                Currently willing to relocate
-              </p>
+                <p>
+                  <Icon name="map pin" />
+                  {data.location}
+                </p>
+                <p id="willMove">
+                  <Icon name="map" />
+                  Currently willing to relocate
+                </p>
               </CardText>
             </Card>
           </Col>
-        
+          
           <Col md={{ size: 6 }} sm={{ size: 12 }}>
             <br />
             <Card body>
@@ -54,6 +55,14 @@ class About extends Component {
               </CardTitle>
               <hr />
               <p>{data.backSkills}</p>
+            </Card>
+            <br />
+            <Card body>
+              <CardTitle id="skills">
+                <h5>Other Skills</h5>
+              </CardTitle>
+              <hr />
+              <p>{data.skills}</p>
             </Card>
           </Col>
         </Row>

@@ -39,7 +39,7 @@ let portfolioData = {
     taught me a wide set of skills for full stack development. Paired with my experience as a working professional 
     in management, training & development, and operations I'm confident I will be an asset to any organization. In addition to 
     being tech savvy, I have experience with other sectors such as business development, effective marketing, and sales.`,
-
+  skills: "UI/UX design concepts, Social media marketing, Project management, SCRUM/Agile development, Public speaking, Microsoft office systems",
   frontSkills:
     "Semantic HTML, CSS3, JS(ES5/6), React.js, Handlebars.js, Moment.js, Bootstrap 4, Passport,js, Firebase, Responsive Web Design, Search Engine Optimization, Semantic-UI.",
   backSkills:
