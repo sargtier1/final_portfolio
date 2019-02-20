@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Card, CardTitle, CardText } from "reactstrap";
-import { Grid, Image } from "semantic-ui-react";
 import "./Home.css";
 
 class Home extends Component {

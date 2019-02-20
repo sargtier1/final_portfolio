@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import LoadingIcon from "./components/LoadingIcon";
 import data from "./data";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
@@ -13,7 +14,7 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    isLoading: false
+    isLoading: true
   };
 
   componentDidMount() {
@@ -23,7 +24,7 @@ class App extends Component {
   render() {
     return this.state.isLoading ? (
       <div>
-        <div className="fa fa-spinner" />
+        <LoadingIcon />
       </div>
     ) : (
       <div className="App">

@@ -36,19 +36,19 @@ let portfolioData = {
     // {third social media link here}
   ],
   aboutMe: `As of 2019 I completed the Full Stack Web Development certification course offered through SMU. The 24-week immersive curriculum 
-    taught me wide set of skills for full stack development. Paired with my previous experience as a working professional 
-    with management, team building, and operations experience I'm confident I will be an asset to any team, or company. In addition to 
-    being tech savvy I have expierence with other sectors such as business development, effective marketing, and sales.`,
+    taught me a wide set of skills for full stack development. Paired with my experience as a working professional 
+    in management, training & development, and operations I'm confident I will be an asset to any organization. In addition to 
+    being tech savvy, I have experience with other sectors such as business development, effective marketing, and sales.`,
 
   frontSkills:
     "Semantic HTML, CSS3, JS(ES5/6), React.js, Handlebars.js, Moment.js, Bootstrap 4, Passport,js, Firebase, Responsive Web Design, Search Engine Optimization, Semantic-UI.",
   backSkills:
-    "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, database theory.",
+    "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, Database theory.",
   projects: [
     {
       name: "Scion",
       desc:
-        "Revelutionizing the way Intended Parents, connect with Gestational Carriers.",
+        "Revolutionizing the way Intended Parents, connect with Gestational Carriers.",
       src: "images/projectpics/scion.png",
       link: "https://github.com/justinkunz/Final_Project"
     },

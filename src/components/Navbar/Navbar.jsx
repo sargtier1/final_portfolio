@@ -5,11 +5,8 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   Container
 } from "reactstrap";
-import { Link, animateScroll as scroll } from "react-scroll";
 
 class PortfolioNavbar extends Component {
   state = {
@@ -28,7 +25,7 @@ class PortfolioNavbar extends Component {
         <Container>
           <NavbarBrand href="/">Salvatore Argentieri</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          {/* <Collapse isOpen={this.state.isOpen} navbar> */}
             <Nav className="ml-auto" navbar>
             {/* will un comment once I figure out how to implement smooth scrolling */}
               {/* <NavItem>
@@ -44,7 +41,7 @@ class PortfolioNavbar extends Component {
                 <NavLink className="smoothscroll" href="">Contact</NavLink>
               </NavItem> */}
             </Nav>
-          </Collapse>
+          {/* </Collapse> */}
         </Container>
       </Navbar>
     );
