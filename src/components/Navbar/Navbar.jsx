@@ -24,7 +24,7 @@ class PortfolioNavbar extends Component {
       <Navbar fixed="top" color="dark" dark expand="sm" className="mb-5">
         <Container>
           <NavbarBrand href="/">Salvatore Argentieri</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          {/* <NavbarToggler onClick={this.toggle} /> */}
           {/* <Collapse isOpen={this.state.isOpen} navbar> */}
             <Nav className="ml-auto" navbar>
             {/* will un comment once I figure out how to implement smooth scrolling */}
