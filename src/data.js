@@ -55,7 +55,7 @@ let portfolioData = {
     {
       name: "Call of Duty Clicky Game",
       desc:
-        "A click-guess game that demostrates an understand react, and life cycle methods. ",
+        "A game that demostrates an understanding of react, and life cycle methods. ",
       src: "images/projectpics/click_game.png",
       link: "https://github.com/sargtier1/Clicky_Game"
     },
