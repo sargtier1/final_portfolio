@@ -5,9 +5,9 @@ let portfolioData = {
   headshot: "images/headshot.jpg",
   location: "Dallas, Texas",
   tagline: `  I hope my passion for building professional, interactive, and
-  sophisticated websites using the latest technologies is appearent
-  after viewing my portfolio. My prefered method of contact for business
-  inquiries, or employment opprutunities is LinkedIn. I do have my
+  sophisticated websites using the latest technologies is apparent
+  after viewing my portfolio. My preferred method of contact for business
+  inquiries, or employment opportunities is LinkedIn. I do have my
   business email on here as well for those of you who are not on
   LinkedIn. Please give me a few business days to reply to inquiries via
   email. Thanks for checking out my website, and I hope to hear from you
@@ -39,11 +39,11 @@ let portfolioData = {
     taught me a wide set of skills for full stack development. Paired with my experience as a working professional 
     in management, training & development, and operations I'm confident I will be an asset to any organization. In addition to 
     being tech savvy, I have experience with other sectors such as business development, effective marketing, and sales.`,
-  skills: "UI/UX design concepts, Social media marketing, Project management, SCRUM/Agile development, Public speaking, Microsoft office systems",
+  skills: "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems, Management",
   frontSkills:
     "Semantic HTML, CSS3, JS(ES5/6), React.js, Handlebars.js, Moment.js, Bootstrap 4, Passport,js, Firebase, Responsive Web Design, Search Engine Optimization, Semantic-UI.",
   backSkills:
-    "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, Database theory.",
+    "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, Database Theory.",
   projects: [
     {
       name: "Scion",
