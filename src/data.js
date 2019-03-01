@@ -41,7 +41,7 @@ let portfolioData = {
     being tech savvy, I have experience with other sectors such as business development, effective marketing, and sales.`,
   skills: "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems, Management",
   frontSkills:
-    "Semantic HTML, CSS3, JS(ES5/6), React.js, Handlebars.js, Moment.js, Bootstrap 4, Passport,js, Firebase, Responsive Web Design, Search Engine Optimization, Semantic-UI, Mocha & Chai, ES-Lint",
+    "Semantic HTML, CSS3, JS(ES5/6), React.js, JQuery, API, Handlebars.js, Moment.js, Bootstrap 4, Passport,js, Firebase, Responsive Web Design, Search Engine Optimization, Semantic-UI, Mocha & Chai, ES-Lint",
   backSkills:
     "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, Database Theory.",
   projects: [
