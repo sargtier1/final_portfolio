@@ -1,5 +1,8 @@
 #homeCard{
-    border-color: white;
+    border: none;
+    height: 40vh;
+    margin: 27.5vh 0;
+    background-color: whitesmoke;
 }
 
 .socialMediaLinks {

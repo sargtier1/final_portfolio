@@ -8,9 +8,9 @@ class Home extends Component {
     let data = this.props.data;
     return (
       <Container id="home-container">
-        <br />
         <Row>
           <Col md={{ size: 10, offset: 1 }} sm="12">
+            <br />
             <Card body id="homeCard">
               <CardTitle>
                 <h1>I am {data.name}</h1>

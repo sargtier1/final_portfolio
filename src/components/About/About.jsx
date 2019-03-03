@@ -10,6 +10,7 @@ class About extends Component {
       <Container id="about-container">
         <Row>
           <Col md={{ size: 10, offset: 1 }} sm="12">
+            <br />
             <CardTitle>
               <h1>About Me</h1>
             </CardTitle>
@@ -38,7 +39,7 @@ class About extends Component {
               </CardText>
             </Card>
           </Col>
-          
+
           <Col md={{ size: 6 }} sm={{ size: 12 }}>
             <br />
             <Card body>

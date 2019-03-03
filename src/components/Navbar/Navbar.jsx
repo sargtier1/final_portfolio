@@ -5,6 +5,8 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
+  NavItem,
+  NavLink,
   Container
 } from "reactstrap";
 
@@ -23,12 +25,12 @@ class PortfolioNavbar extends Component {
     return (
       <Navbar fixed="top" color="dark" dark expand="sm" className="mb-5">
         <Container>
-          <NavbarBrand href="/">Salvatore Argentieri</NavbarBrand>
-          {/* <NavbarToggler onClick={this.toggle} /> */}
-          {/* <Collapse isOpen={this.state.isOpen} navbar> */}
+          <NavbarBrand href="/">JVNC</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
             {/* will un comment once I figure out how to implement smooth scrolling */}
-              {/* <NavItem>
+              <NavItem>
                 <NavLink className="smoothscroll" href="">Home</NavLink>
               </NavItem>
               <NavItem>
@@ -39,9 +41,9 @@ class PortfolioNavbar extends Component {
               </NavItem>
               <NavItem>
                 <NavLink className="smoothscroll" href="">Contact</NavLink>
-              </NavItem> */}
+              </NavItem>
             </Nav>
-          {/* </Collapse> */}
+          </Collapse>
         </Container>
       </Navbar>
     );

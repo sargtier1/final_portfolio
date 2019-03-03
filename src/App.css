@@ -19,6 +19,10 @@
   }
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 h1 {
   color: #2e2e3a;
 }
@@ -40,11 +44,38 @@ h5 {
   height: 100%;
 }
 
-#port-container {
+#portfolio-container {
   height: 100%;
 }
+
 #contact-container {
   height: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  #home-container {
+    height: 100vh;
+  }
 
+  #about-container {
+    height: 100vh;
+  }
+
+  #portfolio-container {
+    height: 100vh;
+  }
+
+  #contact-container {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio-container {
+    height: 100vh;
+  }
+
+  #contact-container {
+    height: 100vh;
+  }
+}
