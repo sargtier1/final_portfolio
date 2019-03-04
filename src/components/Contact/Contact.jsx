@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col, Card, CardTitle, CardText } from "reactstrap";
 import "../../components/Footer/Footer";
 
-class Contact extends Component {
-  render() {
-    let data = this.props.data;
+function Contact(props) {
+
+    let data = props.data;
     return (
       <Container id="contact-container">
         <Row>
@@ -29,6 +29,5 @@ class Contact extends Component {
       </Container>
     );
   }
-}
 
 export default Contact;

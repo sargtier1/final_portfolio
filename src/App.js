@@ -6,7 +6,6 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import LoadingIcon from "./components/LoadingIcon";
-// import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import data from "./data";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
@@ -37,13 +36,12 @@ class App extends Component {
         <PortfolioNavbar data={data} />
         <br />
 
-        <Home data={data} title="Home" subtitle={Home} dark={true} id="home" />
-        <About data={data} title="About" />
-        <Portfolio data={data} title="Portfolio" />
-        <Contact data={data} title="Contact" />
-        <Footer data={data} title="Footer" />
+        <Home data={data} title="Home" subtitle={Home} id="home" />
 
-        
+        <About data={data} title="About" subtitle={About} id="about" />
+        <Portfolio data={data} title="Portfolio" subtitle={Portfolio} id="portfolio" />
+        <Contact data={data} title="Contact" subtitle={Contact} id="contact" />
+        <Footer data={data} title="Footer" />
       </div>
     );
   }

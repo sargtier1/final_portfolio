@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col, Card, CardTitle, CardText } from "reactstrap";
 import { Icon, Image } from "semantic-ui-react";
 import "./About.css";
 
-class About extends Component {
-  render() {
-    let data = this.props.data;
+function About(props) {
+    let data = props.data;
     return (
       <Container id="about-container">
         <Row>
@@ -70,6 +69,5 @@ class About extends Component {
       </Container>
     );
   }
-}
 
 export default About;

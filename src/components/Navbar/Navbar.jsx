@@ -6,10 +6,9 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   Container
 } from "reactstrap";
+import "./Navbar.css"
 
 class PortfolioNavbar extends Component {
   state = {
@@ -26,62 +25,64 @@ class PortfolioNavbar extends Component {
     scroll.scrollToTop();
   };
 
-
-
   render() {
     return (
       <Navbar fixed="top" color="dark" dark expand="sm" className="mb-5">
         <Container>
-          <NavbarBrand href="/">JVNC</NavbarBrand>
+          <NavbarBrand id="navbar-logo" onClick={this.scrollToTop}>SMA</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-
-            <Link
-                activeClass="active"
-                to="section1"
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-              >
-                Section 1
-              </Link>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              {/* <NavItem>
-                <NavLink className="smoothscroll" href="">
-                  Home
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="smoothscroll" href="">
-                  About
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="smoothscroll" href="">
-                  Projects
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="smoothscroll" href="">
-                  Contact
-                </NavLink>
-              </NavItem> */}
+              <ul className="nav-items">
+                <li className="nav-item">
+                  <Link
+                    activeClass="active"
+                    className="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    activeClass="active"
+                    to="About"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    activeClass="active"
+                    to="Portfolio"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    activeClass="active"
+                    to="Contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </Nav>
           </Collapse>
         </Container>

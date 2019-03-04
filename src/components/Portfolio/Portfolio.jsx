@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Container, Row, Col, Card, CardTitle, Button } from "reactstrap";
 import "./Portfolio.css";
 
-class Portfolio extends Component {
-  render() {
-    let data = this.props.data;
+function Portfolio(props) {
+ 
+    let data = props.data;
     return (
       <Container id="portfolio-container">
         <Row>
@@ -53,6 +53,6 @@ class Portfolio extends Component {
       </Container>
     );
   }
-}
+
 
 export default Portfolio;
