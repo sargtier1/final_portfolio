@@ -14,17 +14,18 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 import "./App.css";
 
 class App extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-    isLoading: true
-  };
-}
-
-  componentDidMount() {
-    setTimeout (() => {this.setState({ isLoading: false })}, 250) 
+      isLoading: true
+    };
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 250);
+  }
 
   render() {
     return this.state.isLoading ? (
@@ -35,15 +36,14 @@ class App extends Component {
       <div className="App">
         <PortfolioNavbar data={data} />
         <br />
-          <Home data={data} title="Home" />
 
-          <About data={data} title="About" />
+        <Home data={data} title="Home" subtitle={Home} dark={true} id="home" />
+        <About data={data} title="About" />
+        <Portfolio data={data} title="Portfolio" />
+        <Contact data={data} title="Contact" />
+        <Footer data={data} title="Footer" />
 
-          <Portfolio data={data} title="Portfolio" />
-          
-          <Contact data={data} title="Contact" />
-        <br />
-        <Footer data={data} />
+        
       </div>
     );
   }

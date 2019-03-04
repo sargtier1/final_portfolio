@@ -4,9 +4,8 @@ let portfolioData = {
   role: "Full Stack Web Developer",
   headshot: "images/headshot.jpg",
   location: "Dallas, Texas",
-  tagline: `  I hope my passion for building professional, interactive, and
-  sophisticated websites using the latest technologies is apparent
-  after viewing my portfolio. My preferred method of contact for business
+  tagline: ` Thank you for checking out my portfolio! If you wish 
+  to contact me my preferred method of contact for business
   inquiries, or employment opportunities is LinkedIn. I do have my
   business email on here as well for those of you who are not on
   LinkedIn. Please give me a few business days to reply to inquiries via
@@ -39,9 +38,9 @@ let portfolioData = {
     taught me a wide set of skills for full stack development. Paired with my experience as a working professional 
     in management, training & development, and operations I'm confident I will be an asset to any organization. In addition to 
     being tech savvy, I have experience with other sectors such as business development, marketing, and sales.`,
-  skills: "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems",
+  skills: "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems.",
   frontSkills:
-    "Semantic HTML, CSS3, JS(ES5/6), React.js, JQuery, API, Handlebars.js, Moment.js, Bootstrap 4, Passport,js, Firebase, Responsive Web Design, Search Engine Optimization, Semantic-UI, Mocha & Chai, ES-Lint",
+    "Semantic HTML, CSS3, JS(ES6), Bootstrap 4, JQuery, React.js, Handlebars.js, Moment.js, Passport.js, Responsive Web Design, Semantic-UI, Mocha.js & Chai.js, Travic CLI, Axios, Cheerio.js, ES-Lint, Search Engine Optimization.",
   backSkills:
     "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, Database Theory.",
   projects: [

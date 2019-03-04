@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Card, CardTitle, CardText } from "reactstrap";
-import "./Contact.css";
+import "../../components/Footer/Footer";
 
 class Contact extends Component {
   render() {
@@ -22,7 +22,8 @@ class Contact extends Component {
                   </p>
                 </div>
               </CardText>
-            </Card>
+            </Card>            
+            <br />
           </Col>
         </Row>
       </Container>
