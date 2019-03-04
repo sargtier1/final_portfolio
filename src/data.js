@@ -5,9 +5,9 @@ let portfolioData = {
   headshot: "images/headshot.jpg",
   location: "Dallas, Texas",
   tagline: ` Thank you for checking out my portfolio! If you wish 
-  to contact me my preferred method of contact for business
-  inquiries, or employment opportunities is LinkedIn. I do have my
-  business email on here as well for those of you who are not on
+  to contact me my preferred method of contact is LinkedIn. 
+  Please reach out for employment opportunities, free-lance work. 
+  I do have my business email on here as well for those of you who are not on
   LinkedIn. Please give me a few business days to reply to inquiries via
   email. Thanks for checking out my website, and I hope to hear from you
   in the near future!`,

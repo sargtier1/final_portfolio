@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll as scroll  } from "react-scroll";
 import {
   Collapse,
   Navbar,
@@ -37,7 +37,7 @@ class PortfolioNavbar extends Component {
                 <li className="nav-item">
                   <Link
                     activeClass="active"
-                    className="home"
+                    to="home-container"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -49,7 +49,7 @@ class PortfolioNavbar extends Component {
                 <li className="nav-item">
                   <Link
                     activeClass="active"
-                    to="About"
+                    to="about-container"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -61,7 +61,7 @@ class PortfolioNavbar extends Component {
                 <li className="nav-item">
                   <Link
                     activeClass="active"
-                    to="Portfolio"
+                    to="portfolio-container"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -73,7 +73,7 @@ class PortfolioNavbar extends Component {
                 <li className="nav-item">
                   <Link
                     activeClass="active"
-                    to="Contact"
+                    to="contact-container"
                     spy={true}
                     smooth={true}
                     offset={-70}

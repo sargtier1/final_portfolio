@@ -35,13 +35,16 @@ class App extends Component {
       <div className="App">
         <PortfolioNavbar data={data} />
         <br />
-
         <Home data={data} title="Home" subtitle={Home} id="home" />
-
         <About data={data} title="About" subtitle={About} id="about" />
-        <Portfolio data={data} title="Portfolio" subtitle={Portfolio} id="portfolio" />
+        <Portfolio
+          data={data}
+          title="Portfolio"
+          subtitle={Portfolio}
+          id="portfolio"
+        />
         <Contact data={data} title="Contact" subtitle={Contact} id="contact" />
-        <Footer data={data} title="Footer" />
+        {/* <Footer data={data} title="Footer" /> */}
       </div>
     );
   }

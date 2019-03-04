@@ -11,7 +11,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <Navbar id="Navbar" light expand="sm" className="mb-5">
+    <Navbar id="Footer" light expand="sm" className="mb-5">
       <Container>
         <NavbarBrand href="/">Salvatore Argentieri © 2019</NavbarBrand>
         <Nav className="ml-auto" navbar>

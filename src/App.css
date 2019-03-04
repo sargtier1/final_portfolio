@@ -68,6 +68,10 @@ h5 {
   #contact-container {
     height: 100vh;
   }
+
+  #Footer {
+    margin-top: 50vh;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -77,6 +81,10 @@ h5 {
 
   #contact-container {
     height: 100vh;
+  }
+
+  #Footer {
+    margin-top: 35vh;
   }
 }
 
