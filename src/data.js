@@ -52,6 +52,13 @@ let portfolioData = {
       link: "https://github.com/justinkunz/Final_Project"
     },
     {
+      name: "Basic React To Do App",
+      desc: 
+        "Uses various react components & methods with conditional styles. Vanilla JS, CSS",
+        src: "images/projectpics/reactToDoList.png",
+        link: "https://github.com/sargtier1/reactToDoApp"
+    },
+    {
       name: "Call of Duty Clicky Game",
       desc:
         "A game that demostrates an understanding of react, and life cycle methods. ",
