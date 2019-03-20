@@ -52,11 +52,11 @@ let portfolioData = {
       link: "https://github.com/justinkunz/Final_Project"
     },
     {
-      name: "Basic React To Do App",
-      desc: 
-        "Uses various react components & methods with conditional styles. Vanilla JS, CSS",
-        src: "images/projectpics/reactToDoList.png",
-        link: "https://github.com/sargtier1/reactToDoApp"
+      name: "Random Meme Generator",
+      desc:
+        "A meme generator that will choose a random image. User than selects text. ",
+      src: "images/projectpics/RandomMeme.png",
+      link: "https://github.com/sargtier1/RandomMemeGenerator"
     },
     {
       name: "Call of Duty Clicky Game",
@@ -64,6 +64,13 @@ let portfolioData = {
         "A game that demostrates an understanding of react, and life cycle methods. ",
       src: "images/projectpics/click_game.png",
       link: "https://github.com/sargtier1/Clicky_Game"
+    },
+    {
+      name: "Basic React To Do App",
+      desc: 
+        "Uses various react components & methods with conditional styles. Vanilla JS, CSS",
+        src: "images/projectpics/reactToDoList.png",
+        link: "https://github.com/sargtier1/reactToDoApp"
     },
     {
       name: "Daily Dose",
