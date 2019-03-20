@@ -23,22 +23,21 @@ let portfolioData = {
       link: "https://github.com/sargtier1",
       bigSize: "fa fa-github-square fa-3x",
       smallSize: "fa fa-github-square fa-2x"
-
     },
     {
       name: "Email",
       link: "mailto:salv.m.argent@gmail.com",
       bigSize: "fa fa-envelope fa-3x",
       smallSize: "fa fa-envelope-square fa-2x"
-
     }
     // {third social media link here}
   ],
   aboutMe: `As of 2019 I completed the Full Stack Web Development certification course offered through SMU. The 24-week immersive curriculum 
-    taught me a wide set of skills for full stack development. Paired with my experience as a working professional 
-    in management, training & development, and operations I'm confident I will be an asset to any organization. In addition to 
+    taught me a wide set of skills for full stack engineering. Paired with my experience as a working professional 
+    in management, training & development, and operations I'm confident I will be an asset to any organization, or project I am a part of. In addition to 
     being tech savvy, I have experience with other sectors such as business development, marketing, and sales.`,
-  skills: "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems.",
+  skills:
+    "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems, Restaurant Management Systems.",
   frontSkills:
     "Semantic HTML, CSS3, JS(ES6), Bootstrap 4, JQuery, React.js, Handlebars.js, Moment.js, Passport.js, Responsive Web Design, Semantic-UI, Mocha.js & Chai.js, Travic CLI, Axios, Cheerio.js, ES-Lint, Search Engine Optimization.",
   backSkills:
@@ -67,10 +66,10 @@ let portfolioData = {
     },
     {
       name: "Basic React To Do App",
-      desc: 
+      desc:
         "Uses various react components & methods with conditional styles. Vanilla JS, CSS",
-        src: "images/projectpics/reactToDoList.png",
-        link: "https://github.com/sargtier1/reactToDoApp"
+      src: "images/projectpics/reactToDoList.png",
+      link: "https://github.com/sargtier1/reactToDoApp"
     },
     {
       name: "Daily Dose",
