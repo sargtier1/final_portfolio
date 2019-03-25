@@ -35,7 +35,7 @@ let portfolioData = {
   aboutMe: `As of 2019 I completed the Full Stack Web Development certification course offered through SMU. The 24-week immersive curriculum 
     taught me a wide set of skills for full stack engineering. Paired with my experience as a working professional 
     in management, training & development, and operations I'm confident I will be an asset to any organization, or project I am a part of. In addition to 
-    being tech savvy, I have experience with other sectors such as business development, marketing, and sales.`,
+    being tech savvy, I have experience with other sectors such as business development, online marketing, and sales.`,
   skills:
     "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems, Restaurant Management Systems.",
   frontSkills:
