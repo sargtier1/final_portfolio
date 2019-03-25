@@ -46,7 +46,7 @@ let portfolioData = {
     {
       name: "Scion",
       desc:
-        "Revolutionizing the way Intended Parents, connect with Gestational Carriers.",
+        "Revolutionizing the way Intended Parents connect with Gestational Carriers.",
       src: "images/projectpics/scion.png",
       link: "https://github.com/justinkunz/Final_Project"
     },
