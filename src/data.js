@@ -54,7 +54,7 @@ let portfolioData = {
       name: "Random Meme Generator",
       desc:
         "A meme generator that will choose a random image. User than selects text. ",
-      src: "images/projectpics/RandomMeme.png",
+      src: "images/projectpics/randomMeme.png",
       link: "https://github.com/sargtier1/RandomMemeGenerator"
     },
     {
