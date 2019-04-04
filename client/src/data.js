@@ -1,7 +1,7 @@
 // here I will input all my project data, personal data, and the like.
 let portfolioData = {
   name: "Salvatore Argentieri",
-  role: "Full Stack Web Developer",
+  role: "React Web Developer",
   headshot: "images/headshot.jpg",
   location: "Dallas, Texas",
   tagline: ` Thank you for checking out my portfolio! If you wish 
@@ -32,10 +32,23 @@ let portfolioData = {
     }
     // {third social media link here}
   ],
-  aboutMe: `As of 2019 I completed the Full Stack Web Development certification course offered through SMU. The 24-week immersive curriculum 
-    taught me a wide set of skills for full stack engineering. Paired with my experience as a working professional 
-    in management, training & development, and operations I'm confident I will be an asset to any organization, or project I am a part of. In addition to 
-    being tech savvy, I have experience with other sectors such as business development, online marketing, and sales.`,
+  aboutMe: `I discovered my passion for coding a few years back while studying
+  general engineering at Collin College.  I began teaching my self the
+  basics by building small web applications.  Looking for a change and a
+  challenge, I decided I wanted to take my web development skills to the
+  next level by making a career out of what was my hobby. As such I
+  devoted all the time, and energy I could into learning what it
+  means to build modern, fun, and interactive websites & web
+  applications.  I ultimately went back to school at SMU's Full Stack Web
+  Development Program.  Even though I consider myself more of a front-end
+  developer, The 24-week immersive curriculum taught me a wide set of
+  skills for full stack engineering; Ultimately helping me become a
+  proficient back-end developer too. Paired with my experience as a
+  working professional with management, training & development, and
+  operations I'm confident I will be an asset to any organization or
+  project I am a part of.  In addition to being tech savvy I have
+  experience with other crucial sectors to web development such as
+  business development, digital marketing, and sales.`,
   skills:
     "UI/UX Design Concepts, Social Media Marketing, Project Management, SCRUM/Agile Development, Public Speaking, Microsoft Office Systems, Restaurant Management Systems.",
   frontSkills:

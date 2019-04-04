@@ -27,6 +27,7 @@ function Portfolio(props) {
                           <CardTitle>
                             <h3>{items.name}</h3> <p>{items.desc}</p>
                             <Button
+                              outline
                               id="github-btns"
                               color="info"
                               href={items.link}

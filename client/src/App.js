@@ -3,6 +3,7 @@ import PortfolioNavbar from "../src/components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
+import NewContact from "./components/Contact/NewContact"
 import Contact from "./components/Contact/Contact";
 // import Footer from "./components/Footer/Footer";
 import LoadingIcon from "./components/LoadingIcon";
@@ -43,9 +44,12 @@ class App extends Component {
           subtitle={Portfolio}
           id="portfolio"
         />
-        <Contact data={data} title="Contact" subtitle={Contact} id="contact" />
+        <NewContact/>
+        {/* <Contact data={data} title="Contact" subtitle={Contact} id="contact" /> */}
         {/* <Footer data={data} title="Footer" /> */}
       </div>
+
+      
     );
   }
 }

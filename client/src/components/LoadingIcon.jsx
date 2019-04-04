@@ -4,7 +4,7 @@ class LoadingIcon extends Component {
   render() {
     return (
       <div>
-        <div id="loading-icon" className="fa fa-spinner fa-4x" />
+        <div id="loading-icon" className="fas fa-circle-notch" />
       </div>
     );
   }

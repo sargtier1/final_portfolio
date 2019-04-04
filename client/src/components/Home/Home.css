@@ -1,14 +1,13 @@
 #homeCard{
     border: none;
     height: 40vh;
-    margin: 27.5vh 0;
+    margin: 22.5vh 0;
     background-color: whitesmoke;
 }
 
 .socialMediaLinks {
     margin: 24px 0;
     padding: 0;
-    /* text-shadow: 0px 1px 2px rgba(0, 0, 0, .5); */
     text-align: center;
  }
 
@@ -22,3 +21,9 @@
 
 .socialMediaLinks li a { color:#5bc0de; }
 .socialMediaLinks li a:hover { color: #F34213; }
+
+@media screen and (max-width: 768px) {
+  #homeCard {
+      margin: 5vh 0;
+    }
+  }
