@@ -33,7 +33,7 @@ function About(props) {
                 </p>
                 <p id="willMove">
                   <Icon name="map" />
-                  Currently willing to relocate
+                  Looking for the DFW area
                 </p>
               </CardText>
             </Card>
