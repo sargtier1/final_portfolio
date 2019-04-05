@@ -20,14 +20,15 @@ class FormWrapper extends Component {
       comments: "",
       formSuccess: false
     };
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (
     e,
     { firstName, lastName, email, phoneNumber, comments, value }
   ) => {
+    e.preventDefault()
     this.setState({
       [firstName]: value,
       [lastName]: value,
@@ -37,16 +38,16 @@ class FormWrapper extends Component {
     });
   };
 
-  handleSubmit = () => {
-      const { firstName, lastName, email, phoneNumber, comments } = this.state
-    // send email to me with user info * from my business email
-    // need to set up back end with node mailer
-  }
+  handleSubmit = e => {
+    e.preventDefault();
+    this.setState({ formSuccess: true });
+
+  };
 
   render() {
     return (
       <React.Fragment>
-        <Form >
+        <Form onSubmit={this.handleSubmit} success={this.state.formSuccess}>
           <Form.Group>
             <Form.Input label="First name" placeholder="First Name" width={8} />
             <Form.Input label="Last Name" placeholder="Last Name" width={8} />
@@ -82,7 +83,7 @@ class FormWrapper extends Component {
             content="Please give me a few business to reply!"
           />
           <br />
-          <Button color="teal">
+          <Button type="submit" color="teal">
             {" "}
             <Icon.Group size="large">
               <Icon name="paper plane" />
