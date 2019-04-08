@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Form,
-  TextArea,
-  Message,
-  Button,
-  Icon,
-  Dropdown
-} from "semantic-ui-react";
+import { Form, TextArea, Message, Button, Icon } from "semantic-ui-react";
 
 const options = [
   { text: "Business Consultation", value: "consultation" },
@@ -23,8 +16,7 @@ class FormWrapper extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      optionSelected: [],
-      options: options,
+      options: "",
       phoneNumber: "",
       comments: "",
       formSuccess: false,
@@ -75,7 +67,6 @@ class FormWrapper extends Component {
       return;
     }
     // Name Check
-
     if (this.state.firstName === "") {
       this.setState({
         formMissing: true
@@ -97,14 +88,14 @@ class FormWrapper extends Component {
       });
       return true;
     }
-    // Phonen Number Check
+    // Phone Number Check
     if (isNaN(this.state.phoneNumber)) {
       this.setState({
         formMissing: true
       });
       return true;
     }
-    // Business affiars Check
+    // Business Affiars Check
     if (this.state.business === "") {
       this.setState({
         formMissing: true
@@ -167,8 +158,7 @@ class FormWrapper extends Component {
               options={options}
               placeholder="Please Choose One"
               width={16}
-          
-              onChange={e => this.setState({ options: this.options })}
+              onChange={e => this.setState({ options: e.target.options })}
               error={this.state.formMissing}
             />
           </Form.Group>
