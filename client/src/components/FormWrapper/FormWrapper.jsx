@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Form, TextArea, Message, Button, Icon } from "semantic-ui-react";
+import {
+  Form,
+  TextArea,
+  Message,
+  Button,
+  Icon,
+  Dropdown
+} from "semantic-ui-react";
 
 const options = [
   { text: "Business Consultation", value: "consultation" },
@@ -16,7 +23,8 @@ class FormWrapper extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      business: "",
+      optionSelected: [],
+      options: options,
       phoneNumber: "",
       comments: "",
       formSuccess: false,
@@ -28,7 +36,7 @@ class FormWrapper extends Component {
 
   handleChange = (
     e,
-    { firstName, lastName, email, phoneNumber, business, comments, value }
+    { firstName, lastName, email, phoneNumber, options, comments, value }
   ) => {
     e.preventDefault();
     this.setState({
@@ -36,15 +44,19 @@ class FormWrapper extends Component {
       [lastName]: value,
       [email]: value,
       [phoneNumber]: value,
-      [business]: value,
+      [options]: value,
       [comments]: value
     });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state)
-    this.setState({ formSuccess: true });
+    console.log(this.state);
+    if (this.formValidation()) return;
+
+    if (this.state.formMissing === false) {
+      this.setState({ formSuccess: true });
+    }
   };
 
   formValidation = () => {
@@ -57,61 +69,66 @@ class FormWrapper extends Component {
       this.state.business === "" ||
       this.state.comments === ""
     ) {
-      this.setState({ 
+      this.setState({
         formMissing: true
-       })
-       return
-    } 
+      });
+      return;
+    }
     // Name Check
 
     if (this.state.firstName === "") {
-      this.setState({ 
+      this.setState({
         formMissing: true
-       })
-       return true
+      });
+      return true;
     }
     if (this.state.firstName === "") {
-      this.setState({ 
+      this.setState({
         formMissing: true
-       })
-       return true
+      });
+      return true;
     }
     //  Email Check
     const characterCheck = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const isEmail = characterCheck.test(String(this.state.email).toLowerCase())
+    const isEmail = characterCheck.test(String(this.state.email).toLowerCase());
     if (!isEmail) {
       this.setState({
         formMissing: true
-      })
-      return true
+      });
+      return true;
     }
     // Phonen Number Check
     if (isNaN(this.state.phoneNumber)) {
       this.setState({
         formMissing: true
-      })
-      return true
+      });
+      return true;
     }
     // Business affiars Check
     if (this.state.business === "") {
       this.setState({
         formMissing: true
-      })
-      return true
+      });
+      return true;
     }
     // Comments Check
     if (this.state.comments === "") {
       this.setState({
         formMissing: true
-      })
-      return true
+      });
+      return true;
     }
-  }
+    return false;
+  };
 
   render() {
     return (
       <React.Fragment>
-        <Form onSubmit={this.handleSubmit} success={this.state.formSuccess}>
+        <Form
+          onSubmit={this.handleSubmit}
+          success={this.state.formSuccess}
+          error={this.state.formMissing}
+        >
           <Form.Group>
             <Form.Input
               label="First name"
@@ -126,7 +143,6 @@ class FormWrapper extends Component {
               width={8}
               onChange={e => this.setState({ lastName: e.target.value })}
               error={this.state.formMissing}
-
             />
           </Form.Group>
           <Form.Group>
@@ -136,7 +152,6 @@ class FormWrapper extends Component {
               width={8}
               onChange={e => this.setState({ email: e.target.value })}
               error={this.state.formMissing}
-
             />
             <Form.Input
               label="Phone"
@@ -144,7 +159,6 @@ class FormWrapper extends Component {
               width={8}
               onChange={e => this.setState({ phoneNumber: e.target.value })}
               error={this.state.formMissing}
-
             />
           </Form.Group>
           <Form.Group>
@@ -153,9 +167,9 @@ class FormWrapper extends Component {
               options={options}
               placeholder="Please Choose One"
               width={16}
-              onChange={e => this.setState({ business: this.options })}
+          
+              onChange={e => this.setState({ options: this.options })}
               error={this.state.formMissing}
-
             />
           </Form.Group>
           <Form.Group>
@@ -174,8 +188,17 @@ class FormWrapper extends Component {
             header="E-mail has been sent"
             content="Please give me a few business to reply!"
           />
+          <Message
+            error
+            header="Uh-Oh!"
+            content="The information you entered is either missing or not the correct input."
+          />
           <br />
-          <Button type="submit" color="teal">
+          <Button
+            type="submit"
+            color="teal"
+            onClick={() => this.handleSubmit()}
+          >
             {" "}
             <Icon.Group size="large">
               <Icon name="paper plane" />
