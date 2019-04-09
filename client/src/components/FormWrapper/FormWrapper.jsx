@@ -1,14 +1,6 @@
 import React, { Component } from "react";
 import { Form, TextArea, Message, Button, Icon } from "semantic-ui-react";
 
-const options = [
-  { text: "Business Consultation", value: "consultation" },
-  { text: "Educational Services", value: "educational" },
-  { text: "Employment Opportunity", value: "employment" },
-  { text: "Freelance Commission", value: "freelance" },
-  { text: "Just to say hi!", value: "hi" }
-];
-
 class FormWrapper extends Component {
   constructor() {
     super();
@@ -16,7 +8,6 @@ class FormWrapper extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      options: "",
       phoneNumber: "",
       comments: "",
       formSuccess: false,
@@ -24,11 +15,12 @@ class FormWrapper extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSelectChange = this.handleSelectChange.bind(this)
   }
 
   handleChange = (
     e,
-    { firstName, lastName, email, phoneNumber, options, comments, value }
+    { firstName, lastName, email, phoneNumber, comments, value }
   ) => {
     e.preventDefault();
     this.setState({
@@ -36,9 +28,13 @@ class FormWrapper extends Component {
       [lastName]: value,
       [email]: value,
       [phoneNumber]: value,
-      [options]: value,
       [comments]: value
     });
+  };
+
+  handleSelectChange = (e, { value }) => {
+    console.log(this.state.options);
+    this.setState({ options: value });
   };
 
   handleSubmit = e => {
@@ -52,67 +48,46 @@ class FormWrapper extends Component {
   };
 
   formValidation = () => {
-    // display error message for missing fields
+    // display form error for missing fields
     if (
       this.state.firstName === "" ||
       this.state.lastName === "" ||
       this.state.email === "" ||
       this.state.phoneNumber === "" ||
-      this.state.business === "" ||
       this.state.comments === ""
     ) {
       this.setState({
         formMissing: true
       });
       return;
-    }
-    // Name Check
-    if (this.state.firstName === "") {
-      this.setState({
-        formMissing: true
-      });
-      return true;
-    }
-    if (this.state.firstName === "") {
-      this.setState({
-        formMissing: true
-      });
-      return true;
-    }
+    } 
     //  Email Check
-    const characterCheck = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const characterCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isEmail = characterCheck.test(String(this.state.email).toLowerCase());
     if (!isEmail) {
       this.setState({
         formMissing: true
       });
-      return true;
+      return;
     }
     // Phone Number Check
     if (isNaN(this.state.phoneNumber)) {
       this.setState({
         formMissing: true
       });
-      return true;
-    }
-    // Business Affiars Check
-    if (this.state.business === "") {
-      this.setState({
-        formMissing: true
-      });
-      return true;
-    }
-    // Comments Check
-    if (this.state.comments === "") {
-      this.setState({
-        formMissing: true
-      });
-      return true;
-    }
+      return;
+    }  
     return false;
   };
 
   render() {
+    const options = [
+      { key: "B", text: "Business Consultation", value: "consultation" },
+      { key: "Ed", text: "Educational Services", value: "educational" },
+      { key: "Em", text: "Employment Opportunity", value: "employment" },
+      { key: "F", text: "Freelance Commission", value: "freelance" },
+      { key: "H", text: "Just to say hi!", value: "hi" }
+    ];
     return (
       <React.Fragment>
         <Form
@@ -154,11 +129,11 @@ class FormWrapper extends Component {
           </Form.Group>
           <Form.Group>
             <Form.Select
-              label="I'm Contacting You Becuase..."
+              label="I'm Contacting You Because..."
               options={options}
               placeholder="Please Choose One"
               width={16}
-              onChange={e => this.setState({ options: e.target.options })}
+              onChange={this.handleSelectChange}
               error={this.state.formMissing}
             />
           </Form.Group>
@@ -187,7 +162,7 @@ class FormWrapper extends Component {
           <Button
             type="submit"
             color="teal"
-            onClick={() => this.handleSubmit()}
+            onClick={this.handleSubmit}
           >
             {" "}
             <Icon.Group size="large">
