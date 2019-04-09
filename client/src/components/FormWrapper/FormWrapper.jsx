@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, TextArea, Message, Button, Icon } from "semantic-ui-react";
+import axios from "axios";
 
 class FormWrapper extends Component {
   constructor() {
@@ -9,13 +10,15 @@ class FormWrapper extends Component {
       lastName: "",
       email: "",
       phoneNumber: "",
+      options: "",
       comments: "",
+      sent: false,
       formSuccess: false,
       formMissing: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSelectChange = this.handleSelectChange.bind(this)
+    this.handleSelectChange = this.handleSelectChange.bind(this);
   }
 
   handleChange = (
@@ -43,7 +46,24 @@ class FormWrapper extends Component {
     if (this.formValidation()) return;
 
     if (this.state.formMissing === false) {
-      this.setState({ formSuccess: true });
+
+      let data = {
+        fistName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        number: this.state.phoneNumber,
+        options: this.state.options,
+        comments: this.state.comments
+      };
+
+      axios
+        .post("/api/contact", data)
+        .then(res => {
+          this.setState({ sent: true }, this.resetForm());
+        })
+        .catch(err => {
+          console.log("Message not sent");
+        });
     }
   };
 
@@ -60,7 +80,7 @@ class FormWrapper extends Component {
         formMissing: true
       });
       return;
-    } 
+    }
     //  Email Check
     const characterCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isEmail = characterCheck.test(String(this.state.email).toLowerCase());
@@ -76,8 +96,21 @@ class FormWrapper extends Component {
         formMissing: true
       });
       return;
-    }  
+    }
     return false;
+  };
+
+  resetForm = () => {
+    this.setState({ 
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      options: "",
+      comments: "",
+      formMissing: false,
+      formSuccess: true
+     });
   };
 
   render() {
@@ -159,11 +192,7 @@ class FormWrapper extends Component {
             content="The information you entered is either missing or not the correct input."
           />
           <br />
-          <Button
-            type="submit"
-            color="teal"
-            onClick={this.handleSubmit}
-          >
+          <Button type="submit" color="teal" onClick={this.handleSubmit}>
             {" "}
             <Icon.Group size="large">
               <Icon name="paper plane" />
