@@ -36,7 +36,6 @@ class FormWrapper extends Component {
   };
 
   handleSelectChange = (e, { value }) => {
-    console.log(this.state.options);
     this.setState({ options: value });
   };
 
@@ -57,8 +56,10 @@ class FormWrapper extends Component {
       };
 
       axios
-        .post("/api/contact", data)
+        .post("/send-email", data)
         .then(res => {
+          res.json()
+          console.log(res.json)
           this.setState({ sent: true }, this.resetForm());
         })
         .catch(err => {
@@ -82,7 +83,7 @@ class FormWrapper extends Component {
       return;
     }
     //  Email Check
-    const characterCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const characterCheck = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isEmail = characterCheck.test(String(this.state.email).toLowerCase());
     if (!isEmail) {
       this.setState({
