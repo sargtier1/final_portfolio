@@ -17,7 +17,7 @@ function Contact(props) {
             <hr />
             <CardText>
               <div>
-                <p>{data.tagline}</p>
+                <p>Feel free to send me a message on LinkedIn, or shoot me an email. Please give me a few days to respond.</p>
               </div>
             </CardText>
           </Card>

@@ -57,6 +57,13 @@ let portfolioData = {
     "Node.JS, Express.JS, MySQL, NoSQL, Security Session Storage, User Authentication; Spring MVC Design Pattern, Command line, Git, Deployment, Database Theory.",
   projects: [
     {
+      name: "Gatsby Portfolio Template",
+      desc:
+        "Built with GatsbyJS, GraphQL, and Contentful CMS.",
+      src: "images/projectpics/gatsbyPortfolio.png",
+      link: "https://github.com/sargtier1/GatsbyPortfolioTemplate"
+    },
+    {
       name: "Scion",
       desc:
         "Revolutionizing the way Intended Parents connect with Gestational Carriers.",

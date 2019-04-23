@@ -14,7 +14,7 @@ function Home(props) {
               <h1>I am {data.name}</h1>
             </CardTitle>
             <CardText>
-              <p>{data.aboutMe}</p>
+              {data.aboutMe}
             </CardText>
             <hr />
             <ul className="socialMediaLinks">

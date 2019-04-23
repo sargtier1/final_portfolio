@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+// import API from "../../utils/API";
 import { Form, TextArea, Message, Button, Icon } from "semantic-ui-react";
-import axios from "axios";
 
 class FormWrapper extends Component {
   constructor() {
@@ -45,7 +45,6 @@ class FormWrapper extends Component {
     if (this.formValidation()) return;
 
     if (this.state.formMissing === false) {
-
       let data = {
         fistName: this.state.firstName,
         lastName: this.state.lastName,
@@ -54,17 +53,7 @@ class FormWrapper extends Component {
         options: this.state.options,
         comments: this.state.comments
       };
-
-      axios
-        .post("/send-email", data)
-        .then(res => {
-          res.json()
-          console.log(res.json)
-          this.setState({ sent: true }, this.resetForm());
-        })
-        .catch(err => {
-          console.log("Message not sent");
-        });
+      this.sendEmail(data);
     }
   };
 
@@ -102,7 +91,7 @@ class FormWrapper extends Component {
   };
 
   resetForm = () => {
-    this.setState({ 
+    this.setState({
       firstName: "",
       lastName: "",
       email: "",
@@ -111,7 +100,7 @@ class FormWrapper extends Component {
       comments: "",
       formMissing: false,
       formSuccess: true
-     });
+    });
   };
 
   render() {

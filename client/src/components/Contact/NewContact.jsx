@@ -1,10 +1,7 @@
 import React from 'react';
 import Footer from "../Footer/Footer"
 import FormWrapper from "../FormWrapper/FormWrapper"
-import { Container, Row, Col, Card, CardTitle, CardText } from "reactstrap";
-import { Form } from 'semantic-ui-react'
-
-
+import { Container, Row, Col, Card, CardTitle } from "reactstrap";
 
 function NewContact() {
  
@@ -18,9 +15,7 @@ function NewContact() {
                 <h1>Contact</h1>
               </CardTitle>
               <hr />
-              <CardText>
                 <FormWrapper/>
-              </CardText>
             </Card>
             <br />
           </Col>
